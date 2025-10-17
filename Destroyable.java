@@ -1,4 +1,3 @@
-public class Destroyable {
-    public void destroyed() {
-    }
+public abstract class Destroyable {
+    public abstract void destroyed();
 }
