@@ -1,4 +1,4 @@
-public abstract class Zombie implements Destroyable {
+public class Zombie extends Destroyable {
     protected int health;
     protected int level;
 
@@ -7,9 +7,16 @@ public abstract class Zombie implements Destroyable {
         this.level = level;
     }
 
-    public abstract void heal();
+    public void heal() { }
+
+    @Override
+    public void destroyed() {
+        health -= (health * 0.2);
+        if (health < 0) health = 0;
+    }
 
     public String getZombieInfo() {
         return "Health: " + health + "\nLevel: " + level + "\n";
     }
 }
+ 

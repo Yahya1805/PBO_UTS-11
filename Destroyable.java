@@ -1,3 +1,4 @@
-public interface Destroyable {
-    void destroyed();
+public class Destroyable {
+    public void destroyed() {
+    }
 }
